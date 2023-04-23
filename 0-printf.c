@@ -3,14 +3,14 @@
 void run_buff_print(char buffer[], int *buff_arr_i);
 
 /**
- * do_printf - a function that perform printf command
+ * _printf - a function that perform printf command
  *
  * @format: format of the  arguments to be printed
  * @...: Vairable arguments passed to the function
  *
  * Return: num_char_print (the number printed arguments)
  */
-int do_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i;                       /* index for iteration*/
 	int num_print = 0;     /* number of characters printed per iteration */

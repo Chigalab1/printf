@@ -40,7 +40,7 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
-int do_printf(const char *format, ...);
+int _printf(const char *format, ...);
 int print_handler(const char *fmt, int *i,
 va_list args, char buffer[], int flags, int width, int prec, int size);
 
@@ -79,6 +79,15 @@ int write_char_handler(char c, char buffer[],
 int print_u_bin(va_list list, char buffer[],
         int flags, int width, int prec, int size);
 
+
+/***** a function that print pointer in hexadecimal *****/
+int print_pointer(va_list list, char buffer[], int flags, int width, int prec, int size);
+
+
+/******WRITE HANDLERS *******/
+
+int write_pointer_handler(char buffer[], int ind, int length,
+	int width, int flags, char padd, char extra_c, int padd_start);
 
 
 #endif

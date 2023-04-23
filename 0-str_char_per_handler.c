@@ -38,7 +38,7 @@ int print_char(va_list list, char buffer[], int flags,
  *
  * Return: string printed
  */
-int print_string(va_list list, char buffer[],
+int print_str(va_list list, __attribute__((unused)) char buffer[],
 		__attribute__((unused)) int flags,
 		__attribute__((unused)) int width,
 		__attribute__((unused)) int prec, 

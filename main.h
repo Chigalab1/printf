@@ -74,6 +74,11 @@ int print_percent(__attribute__((unused)) va_list types,
 int write_char_handler(char c, char buffer[],
 			int flags, int width, int precision, int size);
 
+/******** print 'unsigned int' into binary  ********/
+
+int print_u_bin(va_list list, char buffer[],
+        int flags, int width, int prec, int size);
+
 
 
 #endif

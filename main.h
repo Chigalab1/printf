@@ -90,5 +90,10 @@ int write_pointer_handler(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
 
+/********** print rot13 ***************/
+int print_rot13(va_list types, char buffer[],
+                int flags, int width, int precision, int size);
+
+
 #endif
 

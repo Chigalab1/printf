@@ -55,7 +55,7 @@ int prec_handler(const char *format, int *i, va_list args);
 
 /***** a function that prints char, string, percent ****/
 int print_char(va_list list, char buffer[],int flags, int width, int prec, int size);
-int print_string(va_list types, char buffer[],
+int print_str(va_list types, char buffer[],
                 __attribute__((unused)) int flags,
                 __attribute__((unused)) int width,
                 __attribute__((unused)) int prec,

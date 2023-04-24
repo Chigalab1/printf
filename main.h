@@ -101,5 +101,8 @@ int print_integer(va_list list, char buffer[],
 /******* flags handlers *********/
 int flags_handler(const char *format, int *i);
 
+/** Handle the precision for non-custom conversion specifiers **/
+int prec_handler(const char  *format, int *i, va_list args)
+
 #endif
 

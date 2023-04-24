@@ -98,5 +98,8 @@ int print_rot13(va_list types, char buffer[],
 int print_integer(va_list list, char buffer[],
 		int flags, int width, int prec, int size);
 
+/******* flags handlers *********/
+int flags_handler(const char *format, int *i);
+
 #endif
 

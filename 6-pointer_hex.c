@@ -25,8 +25,8 @@ int print_pointer(va_list list, char buffer[], int flags,
 	char pad_flag = ' ';
 	void *addrs = va_arg(list, void *);
 
-	UNUSED(width);
 	UNUSED(size);
+	UNUSED(width);
 
 	if (addrs == NULL)
 	{

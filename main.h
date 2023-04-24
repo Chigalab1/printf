@@ -21,23 +21,23 @@
 
 /**
  * struct fmt - Struct op
- *
  * @fmt: The format.
  * @fn: The function associated.
  */
+
 struct fmt
 {
-	char fmt;
-	int (*fn)(va_list, char[], int, int, int, int);
+char fmt;
+int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fmt fmt_t - Struct op
- *
- * @fmt: The format.
- * @fm_t: The function associated.
- */
+* typedef struct fmt fmt_t - Struct op
+*
+* @fmt: The format.
+* @fm_t: The function associated.
+*/
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
@@ -54,49 +54,52 @@ int prec_handler(const char *format, int *i, va_list args);
 
 
 /***** a function that prints char, string, percent ****/
-int print_char(va_list list, char buffer[],int flags, int width, int prec, int size);
-int print_str(va_list types, char buffer[],
-                __attribute__((unused)) int flags,
-                __attribute__((unused)) int width,
-                __attribute__((unused)) int prec,
-                __attribute__((unused)) int size);
+int print_char(va_list list, char buffer[],
+		int flags, int width, int prec, int size);
 
-int print_percent(__attribute__((unused)) va_list types,
-        __attribute__((unused)) char buffer[],
-        __attribute__((unused)) int flags,
-        __attribute__((unused)) int width,
-        __attribute__((unused)) int prec,
-        __attribute__((unused)) int size);
+int print_str(va_list types, char buffer[],
+__attribute__((unused)) int flags,
+__attribute__((unused)) int width,
+__attribute__((unused)) int prec,
+__attribute__((unused)) int size);
+
+int print_per(__attribute__((unused)) va_list types,
+__attribute__((unused)) char buffer[],
+__attribute__((unused)) int flags,
+__attribute__((unused)) int width,
+__attribute__((unused)) int prec,
+__attribute__((unused)) int size);
 
 
 /******* functions that handle print width ***********/
 
 int write_char_handler(char c, char buffer[],
-			int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 
 /******** print 'unsigned int' into binary  ********/
 
 int print_u_bin(va_list list, char buffer[],
-        int flags, int width, int prec, int size);
+int flags, int width, int prec, int size);
 
 
 /***** a function that print pointer in hexadecimal *****/
-int print_pointer(va_list list, char buffer[], int flags, int width, int prec, int size);
+int print_pointer(va_list list, char buffer[],
+		int flags, int width, int prec, int size);
 
 
 /******WRITE HANDLERS *******/
 
 int write_pointer_handler(char buffer[], int ind, int length,
-	int width, int flags, char padd, char extra_c, int padd_start);
+int width, int flags, char padd, char extra_c, int padd_start);
 
 
 /********** print rot13 ***************/
 int print_rot13(va_list types, char buffer[],
-                int flags, int width, int precision, int size);
+		int flags, int width, int precision, int size);
 
 /****** a function that prints integer ******/
 int print_integer(va_list list, char buffer[],
-		int flags, int width, int prec, int size);
+int flags, int width, int prec, int size);
 
 /******* flags handlers *********/
 int flags_handler(const char *format, int *i);

@@ -53,7 +53,6 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
 	if (str == NULL)
 	{
 		str = "(null)";
-
 		if (prec >= 6)
 		{
 			str = "      ";
@@ -65,31 +64,25 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
 
 	if (prec >= 0 && prec < str_len)
 		str_len = prec;
-
 	if (width > str_len)
 	{
 		if (flags & F_MINUS)
 		{
 			write(1, &str[0], str_len);
-
 			for (i = width - str_len; i > 0; i--)
 			{
 				write(1, " ", 1);
 			}
-
 			return (width);
 		}
 		else
 		{
 			for (i = width - str_len; i > 0; i--)
 				write(1, " ", 1);
-
 			write(1, &str[0], str_len);
-
 			return (width);
 		}
 	}
-
 	return (write(1, str, str_len));
 }
 

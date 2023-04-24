@@ -110,5 +110,8 @@ int prec_handler(const char  *format, int *i, va_list args);
 /** Handle the field width for non-custom conversion specifiers **/
 int width_handler(const char *format, int *i, va_list args);
 
+/* Handle the "l" & 'h' length modifiers for non-custom conversion specifiers*/
+int size_handler(const char *format, int *i);
+
 #endif
 

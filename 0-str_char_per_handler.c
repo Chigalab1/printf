@@ -86,7 +86,6 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
 	return (write(1, str, str_len));
 }
 
-/********** a function the print percentage sign      ************/
 /**
  * print_per - a function that prints a percent sign
  * @list: list of arguments to print

@@ -8,7 +8,6 @@
  *
  * Return: width
  */
-
 int width_handler(const char *format, int *i, va_list args)
 {
 	int c_i;

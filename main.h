@@ -105,7 +105,10 @@ int flags, int width, int prec, int size);
 int flags_handler(const char *format, int *i);
 
 /** Handle the precision for non-custom conversion specifiers **/
-int prec_handler(const char  *format, int *i, va_list args)
+int prec_handler(const char  *format, int *i, va_list args);
+
+/** Handle the field width for non-custom conversion specifiers **/
+int width_handler(const char *format, int *i, va_list args);
 
 #endif
 

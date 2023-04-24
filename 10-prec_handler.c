@@ -2,14 +2,14 @@
 
 /**
  * prec_handler - function that handle the precision for
- * non-custom conversion specifiers
+ :* non-custom conversion specifiers
  * @format: formatted string to print
  * @i: arguments to be printed
  * @args: list of arguments
  *
  * Return: prec
  */
-int prec_handler(const char  *format, int *i, va_list args)
+int prec_handler(const char *format, int *i, va_list args)
 {
 	int c_i = *i + 1;
 	int prec = -1;

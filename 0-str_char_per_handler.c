@@ -33,7 +33,7 @@ int print_char(va_list list, char buffer[], int flags,
  * @buffer: array of string
  * @flags:  for calculating active flags passed
  * @width: get width of string
- * @prec: specifies the number of digits to be printed 
+ * @prec: specifies the number of digits to be printed
  * @size: specifies the size of the data type to be printed
  *
  * Return: string printed
@@ -41,7 +41,7 @@ int print_char(va_list list, char buffer[], int flags,
 int print_str(va_list list, __attribute__((unused)) char buffer[],
 		__attribute__((unused)) int flags,
 		__attribute__((unused)) int width,
-		__attribute__((unused)) int prec, 
+		__attribute__((unused)) int prec,
 		__attribute__((unused)) int size)
 {
 	int i;
@@ -71,7 +71,7 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
 		if (flags & F_MINUS)
 		{
 			write(1, &str[0], str_len);
-			
+
 			for (i = width - str_len; i > 0; i--)
 			{
 				write(1, " ", 1);
@@ -104,10 +104,10 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
  * @size: the print size specifier
  * Return: the percentage sign
  */
-int print_percent(__attribute__((unused)) va_list list,
+int print_per(__attribute__((unused)) va_list list,
 	__attribute__((unused)) char buffer[],
-	__attribute__((unused)) int flags, 
-	__attribute__((unused)) int width, 
+	__attribute__((unused)) int flags,
+	__attribute__((unused)) int width,
 	__attribute__((unused)) int prec,
 	__attribute__((unused)) int size)
 {

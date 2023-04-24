@@ -94,6 +94,9 @@ int write_pointer_handler(char buffer[], int ind, int length,
 int print_rot13(va_list types, char buffer[],
                 int flags, int width, int precision, int size);
 
+/****** a function that prints integer ******/
+int print_integer(va_list list, char buffer[],
+		int flags, int width, int prec, int size);
 
 #endif
 

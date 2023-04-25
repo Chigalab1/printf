@@ -5,7 +5,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define UNUSED(x) (void)(x)
 #define SIZE_OF_BUFF 1024

@@ -17,6 +17,7 @@ int print_str_rev(va_list list, char buffer[], int flags, int width,
 {
 	char *str;
 	int i, j = 0;
+	char *rev_str;
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -38,7 +39,7 @@ int print_str_rev(va_list list, char buffer[], int flags, int width,
 		;
 		i++;
 	}
-	char *rev_str = malloc(i + 1);
+	rev_str = malloc(i + 1);
 
 	if (rev_str == NULL)
 	{

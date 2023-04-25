@@ -26,7 +26,7 @@ int flags_handler(const char *format, int *i)
 	}
 
 	/* Check if i points to a valid position in format string */
-	if (*i < 0 || *i >= strlen(format))
+	if (*i < 0 || *i >= (int)strlen(format))
 	{
 		return (-1); /* Return an error code */
 	}

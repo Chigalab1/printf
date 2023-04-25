@@ -27,12 +27,12 @@ int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 		{'d', print_integer},
 		{'b', print_u_bin},
 		{'u', print_unsigned},
-		{'o', print_octal},
-		{'x', print_hexadecimal},
-		{'X', print_hexa_upper},
+		{'o', print_oct},
+		{'x', print_hex},
+		{'X', print_hex_upper},
 		{'p', print_pointer},
 		{'S', print_non_printable},
-		{'r', print_reverse},
+		{'r', print_str_rev},
 		{'R', print_rot13}, {'\0', NULL}
 	};
 	while (fmt_types[i].fmt != '\0')

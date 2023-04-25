@@ -152,7 +152,7 @@ int print_pointer(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /** a function that print string in reverse  **/
-int print_reverse(va_list list, char buffer[],
+int print_str_rev(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 #endif

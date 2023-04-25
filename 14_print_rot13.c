@@ -44,7 +44,6 @@ int print_rot13(va_list list, char buffer[],
 				c = output[j];
 				write(1, &c, 1);
 				count++;
-
 				break;
 			}
 		}

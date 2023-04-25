@@ -120,19 +120,135 @@ int num_write(int i_d, char buffer[], int flags, int width, int prec,
 			return (write(1, &buffer[i_d], str_len) +
 				write(1, &buffer[1], i - 1));
 		}
-		else if (!(flags & F_MINUS) && PP == ' ')
+		else if (!(flags & F_MINUS) && pp == ' ')
+		{
 			if (c_xtra)
 				buffer[--i_d] = c_xtra;
 			return (write(1, &buffer[1], i - 1) +
 				write(1, &buffer[i_d], str_len));
+		}
 		else if (!(flags & F_MINUS) && pp == '0')
+		{
 			if (c_xtra)
 				buffer[--pp_strt] = c_xtra;
-			return (write(1, &buffer[pp_strt], i -
-pp_strt) + write(1, &buffer[i_d], str_len - (1 - pp_strt)));
-
+			return (write(1, &buffer[pp_strt], i - pp_strt) +
+					write(1, &buffer[i_d], str_len - (1 - pp_strt)));
+		}
 	}
 	if (c_xtra)
 		buffer[--i_d] = c_xtra;
 	return (write(1, &buffer[i_d], str_len));
+}
+
+/**
+ * write_unsgnd - a function that writes an unsigned number
+ * @is_neg: indicates if the num is negative or not
+ * @ind: index of first character in the buffer
+ * @buffer: array of chars to hold buffer
+ * @flags: flags specifiers
+ * @width: width specifier
+ * @prec: the precision specifier
+ * @size: the ize specifier
+ *
+ * Return: Number of written chars.
+ */
+int write_unsgnd(int is_neg, int ind, char buffer[],
+	int flags, int width, int prec, int size)
+{
+	int length = SIZE_OF_BUFF - ind - 1, i = 0;
+	char padd = ' ';
+
+	UNUSED(is_neg);
+	UNUSED(size);
+
+	if (prec == 0 && ind == SIZE_OF_BUFF - 2 && buffer[ind] == '0')
+		return (0);
+
+	if (prec > 0 && prec < length)
+		padd = ' ';
+
+	while (prec > length)
+	{
+		buffer[--ind] = '0';
+		length++;
+	}
+
+	if ((flags & F_ZERO) && !(flags & F_MINUS))
+		padd = '0';
+
+	if (width > length)
+	{
+		for (i = 0; i < width - length; i++)
+			buffer[i] = padd;
+
+		buffer[i] = '\0';
+
+		if (flags & F_MINUS)
+		{
+			return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
+		}
+		else
+		{
+			return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
+		}
+	}
+
+	return (write(1, &buffer[ind], length));
+}
+
+/**
+ * write_pointer_handler - a function to write a memory address
+ * @buffer: arrays to store buffer chars
+ * @ind: index at which first character starts in buffer
+ * @length: length of number printed
+ * @width: the width specifier
+ * @flags: flags specifier
+ * @pp: characters representing the padding
+ * @extra_c: extra char
+ * @pp_start: the index at which padding start
+ *
+ * Return: Number of written chars.
+ */
+int write_pointer_handler(char buffer[], int ind, int length,
+	int width, int flags, char pp, char extra_c, int pp_start)
+{
+	int i;
+
+	if (width > length)
+	{
+		for (i = 3; i < width - length + 3; i++)
+			buffer[i] = pp;
+		buffer[i] = '\0';
+		if (flags & F_MINUS && pp == ' ')
+		{
+			buffer[--ind] = 'x';
+			buffer[--ind] = '0';
+			if (extra_c)
+				buffer[--ind] = extra_c;
+			return (write(1, &buffer[ind], length) + write(1, &buffer[3], i - 3));
+		}
+		else if (!(flags & F_MINUS) && pp == ' ')
+		{
+			buffer[--ind] = 'x';
+			buffer[--ind] = '0';
+			if (extra_c)
+				buffer[--ind] = extra_c;
+			return (write(1, &buffer[3], i - 3) + write(1, &buffer[ind], length));
+		}
+		else if (!(flags & F_MINUS) && pp == '0')
+		{
+			if (extra_c)
+				buffer[--pp_start] = extra_c;
+			buffer[1] = '0';
+			buffer[2] = 'x';
+			return (write(1, &buffer[pp_start], i - pp_start) +
+				write(1, &buffer[ind], length - (1 - pp_start) - 2));
+		}
+	}
+	buffer[--ind] = 'x';
+	buffer[--ind] = '0';
+
+	if (extra_c)
+		buffer[--ind] = extra_c;
+	return (write(1, &buffer[ind], SIZE_OF_BUFF - ind - 1));
 }

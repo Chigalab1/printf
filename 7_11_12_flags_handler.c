@@ -31,11 +31,8 @@ int flags_handler(const char *format, int *i)
                         }
                 }
 
-                if (FLAGS_CH[j] == '\0')
-                {
-                        /* If an invalid flag character is found, return -1. */
-                        return -1;
-                }
+                if (FLAGS_CH[j] == 0)
+                        break;
         }
 
         *i = current_i - 1;

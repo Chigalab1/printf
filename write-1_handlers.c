@@ -110,8 +110,8 @@ int num_write(int i_d, char buffer[], int flags, int width, int prec,
 		str_len++;
 	if (width > str_len)
 	{
-		for (i = 1; i < width - str_len + 1; i++) buffer[i] = pp;
-		buffer[i] = '\0';
+		for (i = 1; i < width - str_len + 1; i++)
+			buffer[i] = pp, buffer[i] = '\0';
 		if (flags & F_MINUS && pp == ' ')
 		{
 			if (c_xtra)

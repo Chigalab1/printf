@@ -164,15 +164,15 @@ long int convert_size_number(long int input_number, int size);
 
 /******  WRITE_HANDLER FUNCTION   *****/
 int number_write(int is_neg, int i_d, char buffer[], int flags,
-		                int width, int prec, int size);
+		int width, int prec, int size);
 int num_write(int i_d, char buffer[], int flags, int width, int prec,
-		                int str_len, char pp, char c_xtra);
+		int str_len, char pp, char c_xtra);
 int write_unsgnd(int is_neg, int ind, char buffer[],
-        int flags, int width, int prec, int size);
+		int flags, int width, int prec, int size);
 int write_char_handler(char ch, char buffer[], int flags, int width,
-                int prec, int size);
+		int prec, int size);
 int write_pointer_handler(char buffer[], int ind, int length,
-                int width, int flags, char padd, char extra_c, int padd_start);
+		int width, int flags, char padd, char extra_c, int padd_start);
 
 
 #endif

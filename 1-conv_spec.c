@@ -43,5 +43,5 @@ int print_integer(va_list list, char buffer[],
 
 	i++;
 
-	return (write_numbers(is_neg, i, buffer, flags, width, prec, size));
+	return (number_write(is_neg, i, buffer, flags, width, prec, size));
 }

@@ -128,15 +128,15 @@ int print_unsigned(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /** PRINT UNSIGNED NUMBER IN OCTAL ***/
-int print_octal(va_list list, char buffer[],
+int print_oct(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /**  PRINT UNSIGNED NUMBER IN HEXADECIMAL ***/
-int print_hexadecimal(va_list list, char buffer[],
+int print_hex(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /** UNSIGNED NUMBER IN UPPER HEXADECIMAL ***/
-int print_hexa_upper(va_list list, char buffer[],
+int print_hex_upper(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /***** a function that prints  hexadecimal number in lower or upper **/

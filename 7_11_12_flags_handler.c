@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * flags_handler - a function to calculate active flag
- * @format: a pointer to a constant character string passed to function
- * @i: pointer to an integer passed as a parameter to function
- *
- * Return: the flags
- */
+* flags_handler - a function to calculate active flag
+* @format: a pointer to a constant character string passed to function
+* @i: pointer to an integer passed as a parameter to function
+*
+* Return: the flags
+*/
 int flags_handler(const char *format, int *i)
 {
 	int j; /* to iterate through the bitmask */
@@ -19,20 +19,40 @@ int flags_handler(const char *format, int *i)
 	/* the corresponding flag bitmasks for the flags listed above. */
 	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
+	/* Check if format string is empty or i pointer is NULL */
+	if (format == NULL || i == NULL)
+	{
+		return (-1); /* Return an error code */
+	}
+
+	/* Check if i points to a valid position in format string */
+	if (*i < 0 || *i >= strlen(format))
+	{
+		return (-1); /* Return an error code */
+	}
+
+	/* Check if the character at i position is a flag character */
+	if (strchr(FLAGS_CH, format[*i]) == NULL)
+	{
+		return (0); /* No flag character found */
+	}
+
 	for (current_i = *i + 1; format[current_i] != '\0'; current_i++)
 	{
 		for (j = 0; FLAGS_CH[j] != '\0'; j++)
 		{
 			if (format[current_i] == FLAGS_CH[j])
 			{
-				/* If a flag character is found, set the corresponding flag bitmask. */
+			/* If a flag character is found, set the corresponding flag bitmask. */
 				flags = flags | FLAGS_ARR[j];
 				break;
 			}
 		}
 
-		if (FLAGS_CH[j] == 0)
+		if (FLAGS_CH[j] == '\0')
+		{
 			break;
+		}
 	}
 
 	*i = current_i - 1;

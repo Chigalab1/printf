@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_str_rev - prints string in reverse
@@ -37,12 +38,19 @@ int print_str_rev(va_list list, char buffer[], int flags, int width,
 		;
 		i++;
 	}
+	char *rev_str = malloc(i + 1);
+
+	if (rev_str == NULL)
+	{
+		return (-1);
+	}
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i];
-
-		write(1, &z, 1);
+		rev_str[j] = str[i];
 		j++;
 	}
+	write(1, rev_str, j);
+	free(rev_str);
+
 	return (j);
 }

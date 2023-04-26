@@ -4,9 +4,9 @@
  * print_hex - prints unsigned number in hexadecimal
  * @list: list of arguments
  * @buffer: buffer array
- * @flags: parameter that calculates active flags
+ * @flags: parameter to calculates active flags
  * @width: width parameter
- * @prec: precission parameter
+ * @prec: precission argument
  * @size: size parameter
  * Return: length of char printed
  *

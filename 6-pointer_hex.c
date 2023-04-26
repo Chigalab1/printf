@@ -4,7 +4,7 @@
  * print_pointer - a function that prints pointers in hexadecimals
  *
  * @list: list of areguments passed to function
- * @buffer: array of arguments
+ * @buffer: array of arg to print
  * @flags: calculates availables flags
  * @width: print width specifier
  * @prec: specifies numb. of digits to be printed

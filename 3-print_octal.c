@@ -5,7 +5,7 @@
  * @list: list of arguments
  * @buffer: buffer array to handle print
  * @flags: parameter to calculate active flags
- * @width: width parameter
+ * @width: width parameter to handle
  * @prec: precission parameter
  * @size: size parameter
  *

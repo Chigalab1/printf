@@ -8,7 +8,7 @@
  * @format: determine whether a size modifier character (either 'l' or 'h')
  *          is present in the format string
  *
- * @i: arguments passed to the funtion to  print
+ * @i: arg passed to the funtion to  print
  *
  * Return: the size of argument
  */

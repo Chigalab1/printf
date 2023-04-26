@@ -3,8 +3,8 @@
 
 /**
  * print_str_rev - prints string in reverse
- * @list: list of arguments
- * @buffer: buffer array
+ * @list: list of argument
+ * @buffer: buffer array to handle
  * @flags: parameter to calulate active flag
  * @width: width parameter
  * @prec: precission parameter

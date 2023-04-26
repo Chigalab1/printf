@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_printable - whether a given character is a printable character or not
+ * is_printable - chrck if given character is a printable character or not
  * @c: is an ASCII character to be evaluated.
  *
  * Return: 1 if c is printable, 0 otherwise

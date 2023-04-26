@@ -16,20 +16,30 @@ int width_handler(const char *format, int *i, va_list args)
 	c_i = *i + 1;
 	while (format[c_i] != '\0')
 	{
-		if (is_digit(format[c_i]))
+		if (format[c_i] == '*')
+		{
+			c_i++;
+			width = va_arg(args, int);
+			break;
+		}
+		else if (is_digit(format[c_i]))
 		{
 			width *= 10;
 			width += format[c_i] - '0';
 		}
+		/**
+		 *
 		else if (format[c_i] == '*')
 		{
 			c_i++;
 			width = va_arg(args, int);
 			break;
 		}
+		*/
 		else
+		{
 			break;
-
+		}
 		c_i++;
 	}
 

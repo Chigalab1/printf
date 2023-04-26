@@ -6,7 +6,7 @@
  * @buffer: array of buffer
  * @flags: calculates active flags passed to the function
  * @width: width specifier
- * @prec: print precision specificier
+ * @prec:  precision specificier
  * @size: size specifier
  *
  * Return: the number of characters printed

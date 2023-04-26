@@ -27,21 +27,20 @@ int is_printable(char c)
  *
  * Return: Always 3
  */
-int append_hexa_code(char ascii, char buffer[], int i)
+int append_hexa_code(char ascii_num, char buffer[], int i)
 {
 	char match_to[] = "0123456789ABCDEF";
 
-	/* The hexa format code is always 2 digits long */
-	if (ascii < 0)
+	if (ascii_num < 0)
 	{
-		ascii *= -1;
+		ascii_num *= -1;
 	}
 
 	buffer[i++] = '\\';
 	buffer[i++] = 'x';
 
-	buffer[i++] = match_to[ascii / 16];
-	buffer[i] = match_to[ascii % 16];
+	buffer[i++] = match_to[ascii_num / 16];
+	buffer[i] = match_to[ascii_num % 16];
 
 	return (3);
 }

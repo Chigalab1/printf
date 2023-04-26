@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prec_handler - function that handle the precision for
+ * prec_handler -  handle the precision for
  :* non-custom conversion specifiers
  * @format: formatted string to print
  * @i: arguments to be printed

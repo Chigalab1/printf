@@ -16,27 +16,12 @@
 int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 	int flags, int width, int prec, int size)
 {
-	int i = 0, unknown_fmt_len = 0, num_char_print  = 0;
-	int ret = 0; /* store the result of the write calls */
+	int i = 0, unknown_fmt_len = 0, num_char_print  = 0, ret = 0;
 
-<<<<<<< HEAD
-	fmt_t fmt_types[] = {
-		{'c', print_char}, {'s', print_str}, {'%', print_per}, {'i', print_integer},
-		{'d', print_integer}, {'b', print_u_bin}, {'u', print_unsigned}, {'o', print_oct},
-		{'x', print_hex}, {'X', print_hex_upper}, {'p', print_pointer},
-		{'S', print_non_printable}, {'r', print_str_rev}, {'R', print_rot13}, {'\0', NULL}
-=======
 	fmt_t fmt_types[] = {{'c', print_char}, {'s', print_str}, {'%', print_per},
-		{'i', print_integer}, {'d', print_integer}, {'b', print_u_bin},
-		{'u', print_unsigned}, {'o', print_oct},
-		{'x', print_hex},
-		{'X', print_hex_upper},
-		{'p', print_pointer},
-		{'S', print_non_printable},
-		{'r', print_str_rev},
-		{'R', print_rot13}, {'\0', NULL}
->>>>>>> 1895e3eb0f1cdd012801795ffac242660effc38c
-	};
+		{'i', print_integer}, {'d', print_integer}, {'b', print_u_bin}, {'u', print_unsigned},
+		{'o', print_oct}, {'x', print_hex}, {'X', print_hex_upper}, {'p', print_pointer},
+		{'S', print_non_printable}, {'r', print_str_rev}, {'R', print_rot13}, {'\0', NULL}};
 	while (fmt_types[i].fmt != '\0')
 	{
 		if (fmt[*ind] == fmt_types[i].fmt)

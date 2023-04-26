@@ -35,7 +35,6 @@ int append_hexa_code(char ascii_num, char buffer[], int i)
 	{
 		ascii_num *= -1;
 	}
-
 	buffer[i++] = '\\';
 	buffer[i++] = 'x';
 

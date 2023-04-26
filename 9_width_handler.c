@@ -2,7 +2,7 @@
 
 /**
  * width_handler - Handle the field width for non-custom conversion specifiers
- * @format: formatted string
+ * @format: formatted string to print
  * @i: list of arguments to print
  * @args: argument lists
  *

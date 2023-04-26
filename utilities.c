@@ -23,7 +23,7 @@ int is_printable(char c)
  *
  * @buffer: array to store buffer
  * @i: index at which to start appending characters
- * @ascii: ASSCI codes
+ * @ascii_num: ASSCI codes
  *
  * Return: Always 3
  */

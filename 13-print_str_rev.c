@@ -17,7 +17,6 @@ int print_str_rev(va_list list, char buffer[], int flags, int width,
 {
 	char *str;
 	int i, j = 0;
-	char *rev_str;
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -32,26 +31,18 @@ int print_str_rev(va_list list, char buffer[], int flags, int width,
 
 		str = ")Null(";
 	}
-	i = 0;
 
-	while (str[i])
+	for (i = 0; str[i]; i++)
 	{
 		;
-		i++;
 	}
-	rev_str = malloc(i + 1);
 
-	if (rev_str == NULL)
-	{
-		return (-1);
-	}
 	for (i = i - 1; i >= 0; i--)
 	{
-		rev_str[j] = str[i];
+		char z = str[i];
+
+		write(1, &z, 1);
 		j++;
 	}
-	write(1, rev_str, j);
-	free(rev_str);
-
 	return (j);
 }

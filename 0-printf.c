@@ -3,9 +3,9 @@
 void run_buff_print(char buffer[], int *buff_arr_i);
 
 /**
- * _printf - a function that perform printf command
+ * _printf -  function that perform printf command
  *
- * @format: format of the  arguments to be printed
+ * @format: format of the arguments to be printed
  * @...: Vairable arguments passed to the function
  *
  * Return: num_char_print (the number printed arguments)

@@ -8,7 +8,7 @@
  * @flags: calculates availables flags
  * @width: print width specifier
  * @prec: specifies numb. of digits to be printed
- * @size: size of characters to be printed
+ * @size: size of chars to be printed
  *
  * Return: number of characters printed
  */

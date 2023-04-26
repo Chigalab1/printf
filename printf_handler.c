@@ -20,20 +20,10 @@ int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 	int ret = 0; /* store the result of the write calls */
 
 	fmt_t fmt_types[] = {
-		{'c', print_char},
-		{'s', print_str},
-		{'%', print_per},
-		{'i', print_integer},
-		{'d', print_integer},
-		{'b', print_u_bin},
-		{'u', print_unsigned},
-		{'o', print_oct},
-		{'x', print_hex},
-		{'X', print_hex_upper},
-		{'p', print_pointer},
-		{'S', print_non_printable},
-		{'r', print_str_rev},
-		{'R', print_rot13}, {'\0', NULL}
+		{'c', print_char}, {'s', print_str}, {'%', print_per}, {'i', print_integer},
+		{'d', print_integer}, {'b', print_u_bin}, {'u', print_unsigned}, {'o', print_oct},
+		{'x', print_hex}, {'X', print_hex_upper}, {'p', print_pointer},
+		{'S', print_non_printable}, {'r', print_str_rev}, {'R', print_rot13}, {'\0', NULL}
 	};
 	while (fmt_types[i].fmt != '\0')
 	{

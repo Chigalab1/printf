@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_non_printable - prints non printable characters
+ * print_non_printable -function prints non printable characters
  * @list: list of arguments
  * @buffer: buffer array
  * @flags: parameter to calculate active flags

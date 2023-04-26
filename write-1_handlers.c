@@ -97,8 +97,7 @@ int num_write(int i_d, char buffer[], int flags, int width, int prec,
 {
 	int i, pp_strt = 1;
 
-	if (prec == 0 && i_d == SIZE_OF_BUFF - 2 && buffer[i_d]
-			== '0' && width == 0)
+	if (prec == 0 && i_d == SIZE_OF_BUFF - 2 && buffer[i_d] == '0' && width == 0)
 		return (0);
 	if (prec == 0 && i_d == SIZE_OF_BUFF - 2 && buffer[i_d] == '0')
 		buffer[i_d] = pp = ' ';
@@ -123,8 +122,7 @@ int num_write(int i_d, char buffer[], int flags, int width, int prec,
 		{
 			if (c_xtra)
 				buffer[--i_d] = c_xtra;
-			return (write(1, &buffer[1], i - 1) +
-				write(1, &buffer[i_d], str_len));
+			return (write(1, &buffer[1], i - 1) + write(1, &buffer[i_d], str_len));
 		}
 		else if (!(flags & F_MINUS) && pp == '0')
 		{

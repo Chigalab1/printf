@@ -93,7 +93,7 @@ int print_str(va_list list, __attribute__((unused)) char buffer[],
  * @flags:  calculates all active flags passed
  * @width: specifies the minimum width of the output
  * @prec: specifies the number of digits to be printed
- * @size: the print size specifier
+ * @size: the print size parameter
  * Return: the percentage sign
  */
 int print_per(__attribute__((unused)) va_list list,

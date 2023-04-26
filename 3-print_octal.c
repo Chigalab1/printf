@@ -25,7 +25,7 @@ int print_oct(va_list list, char buffer[], int flags, int width,
 	if (n == 0)
 		buffer[a--] = '0';
 
-	buffer[SIZE_OF_BUFF - 1] = '0';
+	buffer[SIZE_OF_BUFF - 1] = '\0';
 
 	while (n > 0)
 	{

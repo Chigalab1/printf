@@ -18,8 +18,7 @@ int print_pointer(va_list list, char buffer[], int flags,
 {
 	char str_flags = 0;
 	int i = SIZE_OF_BUFF - 2;
-	int p_len = 2;
-	int pad_start = 1;
+	int p_len = 2, pad_start = 1;
 	unsigned long p_address;
 	char hex_match[] = "0123456789abcdef";
 	char pad_flag = ' ';

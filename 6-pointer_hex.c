@@ -37,7 +37,7 @@ int print_pointer(va_list list, char buffer[], int flags,
 
 	p_address = (unsigned long)addrs;
 
-	if (p_address > 0)
+	while (p_address > 0)
 	{
 		buffer[i--] = hex_match[p_address % 16];
 		p_address /= 16;
@@ -57,4 +57,3 @@ int print_pointer(va_list list, char buffer[], int flags,
 	return (write_pointer_handler(buffer, i, p_len, width, flags,
 				pad_flag, str_flags, pad_start));
 }
-

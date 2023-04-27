@@ -16,25 +16,28 @@
 int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 	int flags, int width, int prec, int size)
 {
-	int i, unknown_fmt_len = 0, num_char_print  = -1;
+	int i, unknown_fmt_len = 0, num_char_print  = -1, ret = 0;
 
 	fmt_t fmt_types[] = {{'c', print_char}, {'s', print_str}, {'R', print_rot13},
 		{'i', print_integer}, {'d', print_integer}, {'b', print_u_bin},
 		{'%', print_per}, {'S', print_non_printable}, {'r', print_str_rev},
 		{'u', print_unsigned}, {'\0', NULL}};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
-	{
 		if (fmt[*ind] == fmt_types[i].fmt)
 			return (fmt_types[i].fn(args, buffer, flags, width, prec, size));
-	}
+
 	if (fmt_types[i].fmt == '\0')
 	{
 		if (fmt[*ind] == '\0')
 			return (-1);
 		unknown_fmt_len += write(1, "%%", 1);
+
 		if (fmt[*ind - 1] == ' ')
 		{
-			unknown_fmt_len += write(1, " ", 1);
+			ret = write(1, " ", 1);
+			if (ret < 0)
+				return (-1);
+			unknown_fmt_len += ret;
 		}
 		else if (width)
 		{
@@ -45,8 +48,12 @@ int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 				--(*ind);
 			return (1);
 		}
-		unknown_fmt_len += write(1, &fmt[*ind], 1);
-		return (unknown_fmt_len);
+		ret = write(1, &fmt[*ind], 1);
+		if (ret < 0)
+			return (-1);
+		unknown_fmt_len += ret;
+		num_char_print += unknown_fmt_len;
+		return (num_char_print);
 	}
 	return (num_char_print);
 }

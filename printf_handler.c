@@ -16,7 +16,7 @@
 int print_handler(const char *fmt, int *ind, va_list args, char buffer[],
 	int flags, int width, int prec, int size)
 {
-	int i, unknown_fmt_len = 0, num_char_print  = -1, ret = 0;
+	int i, unknown_fmt_len = 0, num_char_print  = 0, ret = 0;
 	fmt_t fmt_types[] = {{'c', print_char}, {'s', print_str}, {'%', print_per},
 		{'R', print_rot13}, {'i', print_integer}, {'d', print_integer},
 		{'b', print_u_bin}, {'u', print_unsignd}, {'o', print_oct}, {'x', print_hex},

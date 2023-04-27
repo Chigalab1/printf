@@ -27,7 +27,7 @@ int is_printable(char c)
  *
  * Return: Always 3
  */
-int append_hexa_code(signed char ascii_num, char buffer[], int i)
+int append_hexa_code(char ascii_num, char buffer[], int i)
 {
 	char match_to[] = "0123456789ABCDEF";
 

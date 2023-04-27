@@ -125,7 +125,7 @@ int print_int(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /** A FUNCTION THAT PRINT UNSIGNED NUMBER **/
-int print_unsigned(va_list list, char buffer[],
+int print_unsignd(va_list list, char buffer[],
 	int flags, int width, int prec, int size);
 
 /** PRINT UNSIGNED NUMBER IN OCTAL ***/

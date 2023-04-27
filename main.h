@@ -158,7 +158,7 @@ int print_str_rev(va_list list, char buffer[],
 
 /**********  utilities ***********/
 int is_printable(char c);
-int append_hexa_code(signed char ascii, char buffer[], int i);
+int append_hexa_code(char ascii, char buffer[], int i);
 int is_digit(char c);
 long int convert_size_unsgnd(unsigned long int input_number, int size);
 long int convert_size_number(long int input_number, int size);

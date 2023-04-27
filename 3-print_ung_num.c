@@ -11,7 +11,7 @@
  *
  * Return: number of char printed
  */
-int print_unsigned(va_list list, char buffer[], int flags, int width,
+int print_unsignd(va_list list, char buffer[], int flags, int width,
 		int prec, int size)
 {
 	int a = SIZE_OF_BUFF - 2;

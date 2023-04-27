@@ -13,34 +13,33 @@ int width_handler(const char *format, int *i, va_list args)
 	int c_i;
 	int width = 0;
 
-	c_i = *i + 1;
-	while (format[c_i] != '\0')
+	for (c_i = *i + 1; format[c_i] != '\0'; c_i++)
 	{
+		/**
+		 *
 		if (format[c_i] == '*')
 		{
 			c_i++;
 			width = va_arg(args, int);
 			break;
 		}
-		else if (is_digit(format[c_i]))
+		*/
+		if (is_digit(format[c_i]))
 		{
 			width *= 10;
 			width += format[c_i] - '0';
 		}
-		/**
-		 *
 		else if (format[c_i] == '*')
 		{
 			c_i++;
 			width = va_arg(args, int);
 			break;
 		}
-		*/
 		else
 		{
 			break;
 		}
-		c_i++;
+	/*	c_i++; */
 	}
 
 	*i = c_i - 1;

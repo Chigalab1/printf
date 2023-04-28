@@ -19,7 +19,7 @@ int print_hex(va_list list, char buffer[], int flags, int width,
 }
 
 /**
- * print_hex_upper - prints unsigned int in upper hexadecimal
+ * print_hex_upper - func that prints unsigned int in upper hexadecimal
  * @list: list of arguments
  * @buffer: buffer array
  * @flags: parameter to calculate active flags

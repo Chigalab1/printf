@@ -8,7 +8,7 @@
  * @flags: parameter to calculate flags
  * @flag_ch: calculate active flag
  * @width: parameter to get width
- * @prec: precision parameter
+ * @prec: prec parameter
  * @size: size parameter
  * @size: size
  *

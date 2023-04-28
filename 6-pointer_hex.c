@@ -10,7 +10,7 @@
  * @prec: specifies numb. of digits to be printed
  * @size: size of chars to be printed
  *
- * Return: number of characters printed
+ * Return: list of characters printed
  */
 
 int print_pointer(va_list list, char buffer[], int flags,

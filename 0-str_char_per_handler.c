@@ -31,12 +31,12 @@ int print_char(va_list list, char buffer[], int flags,
  *
  * @list: list a of arguments passed to the function
  * @buffer: array of string
- * @flags:  for calculating active flags passed
+ * @flags: calculate active flags passed
  * @width: get width of string
  * @prec: specifies the number of digits to be printed
  * @size: specifies the size of the data type to be printed
  *
- * Return: string printed
+ * Return: string printed to
  */
 int print_str(va_list list, __attribute__((unused)) char buffer[],
 		__attribute__((unused)) int flags,

@@ -6,7 +6,7 @@
  * @buffer: buffer array
  * @flags: arg to calculate active flags
  * @prec: precission specifiers
- * @width: argument to get width
+ * @width: arg to get width
  * @size: size specifier
  *
  * Return: number of chars

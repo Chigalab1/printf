@@ -7,7 +7,7 @@
  * @buffer: buffer array to handle
  * @flags: parameter to calulate active flag
  * @width: width parameter
- * @prec: precission parameter
+ * @prec: prec parameter
  * @size: size parameter
  *
  * Return: Length of char printed

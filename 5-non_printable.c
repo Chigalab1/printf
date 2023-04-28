@@ -7,7 +7,7 @@
  * @flags: parameter to calculate active flags
  * @width: parameter to get width
  * @prec: precission parameter
- * @size: size parameter
+ * @size: size argument
  *
  * Return: Length of char printed
  */

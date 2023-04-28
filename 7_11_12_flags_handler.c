@@ -3,7 +3,7 @@
 /**
 * flags_handler - a function to calculate active flag
 * @format: a pointer to a constant character string passed to function
-* @i: pointer to an int  passed as a parameter to function
+* @i: a pointer to an int  passed as a parameter to function
 *
 * Return: the flags
 */

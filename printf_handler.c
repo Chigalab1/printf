@@ -7,8 +7,8 @@
  * @ind: a pointer to an integer that keeps track of the current
  *       position in the format string
  * @buffer: a character array used to handle the output of the function
- * @flags: an integer that stores the active flags for formatting the output
- * @width: an integer that specifies the minimum width of the output
+ * @flags: integer that stores the active flags for formatting the output
+ * @width: integer that specifies the minimum width of the output
  * @prec: an integer that specifies the precision for floating-point types
  * @size: an integer that specifies the size of the argument
  * Return: 1 or 2 or -1 if an error occurs

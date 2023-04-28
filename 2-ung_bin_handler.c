@@ -5,7 +5,7 @@
 /**
  * print_u_bin - a function to print unsigned int in binary
  *
- * @list: list of all arguments passed to function
+ * @list: arguments passed to function
  * @buffer: to contain array to print
  * @flags:  calculates active flags in function
  * @width: get width of print

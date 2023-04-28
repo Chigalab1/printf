@@ -5,7 +5,7 @@
  :* non-custom conversion specifiers
  * @format: formatted string to print
  * @i: arguments to be printed
- * @args: list of arguments
+ * @args: arguments
  *
  * Return: prec
  */

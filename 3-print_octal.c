@@ -9,7 +9,7 @@
  * @prec: precission parameter
  * @size: size parameter
  *
- * Return: length of char printed
+ * Return: number of char printed
  */
 int print_oct(va_list list, char buffer[], int flags, int width,
 		int prec, int size)

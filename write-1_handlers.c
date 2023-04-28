@@ -86,7 +86,7 @@ int number_write(int is_neg, int i_d, char buffer[], int flags,
  * @flags: flag parameter
  * @width: width parameter
  * @prec: precision parameter
- * @str_len: number length
+ * @str_len: length
  * @pp: padding character
  * @c_xtra: extra character
  *

@@ -10,7 +10,7 @@
  *
  * @i: arg passed to the funtion to  print
  *
- * Return: the size of argument
+ * Return: size of argument
  */
 
 int size_handler(const char *format, int *i)

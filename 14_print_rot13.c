@@ -7,7 +7,7 @@
  * @flags: calculates active flags passed to the function
  * @width: width specifier
  * @prec:  precision specificier
- * @size: size specifier
+ * @size: size parameter
  *
  * Return: the number of characters printed
  */

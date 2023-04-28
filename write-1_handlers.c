@@ -138,7 +138,7 @@ int num_write(int i_d, char buffer[], int flags, int width, int prec,
 }
 
 /**
- * write_unsgnd - a function that writes an unsigned number
+ * write_unsgnd - function that writes an unsigned number
  * @is_neg: indicates if the num is negative or not
  * @ind: index of first character in the buffer
  * @buffer: array of chars to hold buffer

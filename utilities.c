@@ -31,7 +31,7 @@ int append_hexa_code(char ascii_num, char buffer[], int i)
 {
 	char match_to[] = "0123456789ABCDEF";
 
-	if (ascii_num < 0)
+	if (ascii_num <= 0)
 	{
 		ascii_num *= -1;
 	}
